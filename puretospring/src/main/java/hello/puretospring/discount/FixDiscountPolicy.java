@@ -2,7 +2,10 @@ package hello.puretospring.discount;
 
 import hello.puretospring.member.Grade;
 import hello.puretospring.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy {
 
     private int discountFixAmount = 1000;
