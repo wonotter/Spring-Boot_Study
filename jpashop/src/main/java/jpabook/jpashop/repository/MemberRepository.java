@@ -12,10 +12,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MemberRepository {
 
-    /*
+    /**
     * EntityManager 역시 @RequiredArgsConstructor 사용 가능
     * Spring Data JPA가 이를 지원하기 때문
-    * */
+     */
 //    @PersistenceContext
 //    private EntityManager em;
 
