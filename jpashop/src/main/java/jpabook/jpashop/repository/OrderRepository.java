@@ -95,4 +95,16 @@ public class OrderRepository {
 
         return query.getResultList();
     }
+
+    // fetch join을 사용하기 위해 JPA 문법 사용
+    public List<Order> findAllWithMemberDelivery() {
+        
+        // join fetch 문법을 통해 member와 delivery를 먼저 join한 다음
+        // select 문을 통해 모든 필드를 다 끌고옴
+        return em.createQuery(
+                "select o from Order o" +
+                        " join fetch o.member m" +
+                        " join fetch o.delivery d", Order.class
+        ).getResultList();
+    }
 }
