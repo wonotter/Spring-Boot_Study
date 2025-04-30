@@ -391,7 +391,7 @@ public class QuerydslBasicTest {
     }
 
     /**
-     * 나이가 평균 이상인 회원을 조회
+     * 서브 쿼리 여러 건 처리, in 사용
      */
     @Test
     public void subQueryIn() {
